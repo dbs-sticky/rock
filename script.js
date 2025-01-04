@@ -11,10 +11,10 @@ return options[randomZeroToThree]; // use the random number to access one of the
 }
 
 
-
 function getHumanChoice() {
 let humanChoice = prompt("enter an option i.e. rock, paper, or scissors"); //get the value from the user
 humanChoice = humanChoice.toLowerCase(); // convert user entry to lower case
+humanChoice = humanChoice.trim(); // remove any surrounding spaces entered accidently e.g. by Copy/Paste etc.
 
     if (humanChoice == "rock" || humanChoice ==  "paper" || humanChoice ==  "scissors") { // check that the entry is one of the 3 valid options
         console.log(`Thank you, you have entered ${humanChoice}`); // show the user that their entry was recorded
@@ -22,10 +22,9 @@ humanChoice = humanChoice.toLowerCase(); // convert user entry to lower case
             } else {
             console.log("Not a valid entry, please try again"); // let the user know that their entry was not valid
         }
-
-    
-
 };
+
+
 
 getComputerChoice();
 
