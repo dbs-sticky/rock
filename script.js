@@ -1,4 +1,3 @@
-// return a random string of: rock, paper, or scissors
 
 let humanScore = 0;
 let computerScore = 0;
@@ -10,7 +9,7 @@ const computerChoose = options[randomZeroToThree];
 
 console.log(`The computer selected: ${computerChoose}`); // log the result to the console
 return computerChoose; // use the random number to access one of the 3 elements in the array, and return the result
-}
+};
 
 
 function getHumanChoice() {
@@ -27,20 +26,20 @@ humanInput = humanInput.trim(); // remove any surrounding spaces entered acciden
 };
 
 
-function playRound(humanChoice, computerChoice) {
-    if (humanSelection === computerSelection) {
+function playRound(humanSelect, computerSelect) {
+    if (humanSelect === computerSelect) {
         console.log("It was a draw");
     } else if (
-        (humanSelection === "rock" && computerSelection === "scissors") ||
-        (humanSelection === "scissors" && computerSelection === "paper") ||
-        (humanSelection === "paper" && computerSelection === "rock")
+        (humanSelect === "rock" && computerSelectn === "scissors") ||
+        (humanSelect === "scissors" && computerSelect === "paper") ||
+        (humanSelect === "paper" && computerSelect === "rock")
     ) {
         humanScore++;
         console.log("You win this round!");
     } else if (
-        (computerSelection === "rock" && humanSelection === "scissors") ||
-        (computerSelection === "scissors" && humanSelection === "paper") ||
-        (computerSelection === "paper" && humanSelection === "rock")
+        (computerSelect === "rock" && humanSelect === "scissors") ||
+        (computerSelect === "scissors" && humanSelect === "paper") ||
+        (computerSelect === "paper" && humanSelect === "rock")
     ) {
         computerScore++;
         console.log("Computer wins this round!");
@@ -53,7 +52,6 @@ const humanSelection = getHumanChoice(); // set human choice to a new variable
 const computerSelection = getComputerChoice(); //set computer choice to a new variable
 
 playRound(humanSelection, computerSelection); // pass new variables into main function
-
 
 
 console.log(`Computer Score: ${computerScore} . Player Score: ${humanScore}`) 
