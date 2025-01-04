@@ -36,13 +36,24 @@ const computerSelection = getComputerChoice(); //set computer choice to a new va
 
 playRound(humanSelection, computerSelection); // pass new variables into main function
 
-if (humanSelection == computerSelection) {console.log("It was a draw");} else if
-(humanSelection == "rock" && computerSelection == "scissors") {humanScore = ++humanScore;} else if
-(humanSelection == "scissors" && computerSelection == "paper") {humanScore = ++humanScore;} else if
-(humanSelection == "paper" && computerSelection == "rock") {humanScore = ++humanScore;} else if
-(computerSelection == "rock" && humanSelection == "scissors") {computerScore = ++computerScore;} else if
-(computerSelection == "scissors" && humanSelection == "paper") {computerScore = ++computerScore;} else if
-(computerSelection == "paper" && humanSelection == "rock") {computerScore = ++computerScore;} else 
-console.log("Error");
+if (humanSelection === computerSelection) {
+    console.log("It was a draw");
+} else if (
+    (humanSelection === "rock" && computerSelection === "scissors") ||
+    (humanSelection === "scissors" && computerSelection === "paper") ||
+    (humanSelection === "paper" && computerSelection === "rock")
+) {
+    humanScore++;
+    console.log("You win this round!");
+} else if (
+    (computerSelection === "rock" && humanSelection === "scissors") ||
+    (computerSelection === "scissors" && humanSelection === "paper") ||
+    (computerSelection === "paper" && humanSelection === "rock")
+) {
+    computerScore++;
+    console.log("Computer wins this round!");
+} else {
+    console.log("Error");
+}
 
 console.log(`Computer Score: ${computerScore} . Player Score: ${humanScore}`) 
