@@ -13,7 +13,7 @@ return options[randomZeroToThree]; // use the random number to access one of the
 
 function getHumanChoice() {
 let humanChoice = prompt("enter an option i.e. rock, paper, or scissors"); //get the value from the user
-humanChoice = humanChoice.toLowerCase(); // convert user entry to lower case
+humanChoice = humanChoice.toLowerCase(); // convert user entry to lower case, so case becomes irrelevant
 humanChoice = humanChoice.trim(); // remove any surrounding spaces entered accidently e.g. by Copy/Paste etc.
 
     if (humanChoice == "rock" || humanChoice ==  "paper" || humanChoice ==  "scissors") { // check that the entry is one of the 3 valid options
