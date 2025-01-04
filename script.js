@@ -28,7 +28,25 @@ humanInput = humanInput.trim(); // remove any surrounding spaces entered acciden
 
 
 function playRound(humanChoice, computerChoice) {
-
+    if (humanSelection === computerSelection) {
+        console.log("It was a draw");
+    } else if (
+        (humanSelection === "rock" && computerSelection === "scissors") ||
+        (humanSelection === "scissors" && computerSelection === "paper") ||
+        (humanSelection === "paper" && computerSelection === "rock")
+    ) {
+        humanScore++;
+        console.log("You win this round!");
+    } else if (
+        (computerSelection === "rock" && humanSelection === "scissors") ||
+        (computerSelection === "scissors" && humanSelection === "paper") ||
+        (computerSelection === "paper" && humanSelection === "rock")
+    ) {
+        computerScore++;
+        console.log("Computer wins this round!");
+    } else {
+        console.log("Error");
+    };
 };
 
 const humanSelection = getHumanChoice(); // set human choice to a new variable
@@ -36,24 +54,6 @@ const computerSelection = getComputerChoice(); //set computer choice to a new va
 
 playRound(humanSelection, computerSelection); // pass new variables into main function
 
-if (humanSelection === computerSelection) {
-    console.log("It was a draw");
-} else if (
-    (humanSelection === "rock" && computerSelection === "scissors") ||
-    (humanSelection === "scissors" && computerSelection === "paper") ||
-    (humanSelection === "paper" && computerSelection === "rock")
-) {
-    humanScore++;
-    console.log("You win this round!");
-} else if (
-    (computerSelection === "rock" && humanSelection === "scissors") ||
-    (computerSelection === "scissors" && humanSelection === "paper") ||
-    (computerSelection === "paper" && humanSelection === "rock")
-) {
-    computerScore++;
-    console.log("Computer wins this round!");
-} else {
-    console.log("Error");
-};
+
 
 console.log(`Computer Score: ${computerScore} . Player Score: ${humanScore}`) 
