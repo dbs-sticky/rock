@@ -54,6 +54,6 @@ if (humanSelection === computerSelection) {
     console.log("Computer wins this round!");
 } else {
     console.log("Error");
-}
+};
 
 console.log(`Computer Score: ${computerScore} . Player Score: ${humanScore}`) 
