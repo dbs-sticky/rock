@@ -48,7 +48,6 @@ function playRound(humanSelect, computerSelect) { // function to play a single r
 }
 
 function playGame() {
-
     for (let gameNumber = 1; gameNumber <= 5; gameNumber++){ //iterate the round 5 times
         const humanSelection = getHumanChoice(); //get the human choice
         const computerSelection = getComputerChoice(); // get the computer
@@ -61,7 +60,6 @@ function playGame() {
     } else { // else tell them who the winner was
         humanScore > computerScore ? console.log("You win 😊") : console.log("Computer wins 😢")
     }
-
 }
 
 playGame() // play the game
